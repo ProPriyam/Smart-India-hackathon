@@ -85,8 +85,8 @@ class MySubscribeCallback(SubscribeCallback):
           global flag
           flag = 1
         elif message.message == 'OFF':
-      global flag
-      flag = 0
+          global flag
+          flag = 0
         elif message.message == 'WATER':
           pump.off()
           sleep(5)
