@@ -116,8 +116,8 @@ while True:
     print(DHT_Read)
 
     dictionary = {"eon": {"Temperature": temperature, "Humidity": humidity}}
-    pubnub.publish().channel('ch2').message([DHT_Read]).async(publish_callback)
-    pubnub.publish().channel("eon-chart").message(dictionary).async(publish_callback)
+    pubnub.publish().channel('ch2').message([DHT_Read]).pn_async()(publish_callback)
+    pubnub.publish().channel("eon-chart").message(dictionary).pn_async()(publish_callback)
 
     wet = get_status()
     
