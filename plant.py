@@ -123,14 +123,11 @@ while True:
 		wet = get_status()
 		
 		if wet == True:
-		    print("turning on")
-		    pump.off()
-		    sleep(5)
 		    print("pump turning off")
 		    pump.on()
 		    sleep(1)
 		else:
-		    pump.on()
+		    pump.off()
 
 		sleep(1)
 	elif flag == 0:
